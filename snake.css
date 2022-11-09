@@ -137,3 +137,12 @@ body{
     border: 1px solid #FFFFFF;
     border-radius: 8px;
 }
+
+.flash{    
+    animation-name: flash-animation;
+    animation-duration: 0.3s;
+}
+@keyframes flash-animation {  
+    from { color: #1cffbb; background: hsla(207, 95%, 8%, 0.84); }
+    to   { color: default; background: default;}
+}
