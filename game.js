@@ -1,6 +1,7 @@
+import {update as updateSnake, draw as drawSnake, SNAKE_SPEED} from './snake.js';
+
 let lastRenderTime = 0;
-//how many time the snake moves per second
-const SNAKE_SPEED = 1;
+const gameBoard = document.getElementById("gameBoard");
 
 //game frame loop
 function main(currentTime){
@@ -24,10 +25,11 @@ window.requestAnimationFrame(main);
 
 //updates game params, exx snake position, length, food position
 function update(){
-
+    updateSnake();
 }
 
-//
+//draws the game items after updating their positions
 function draw(){
-
+    gameBoard.innerHTML = '';
+    drawSnake(gameBoard);
 }

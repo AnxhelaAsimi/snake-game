@@ -9,7 +9,7 @@ body{
     background-color: black;
 }
 
-#game-board{
+#gameBoard{
     background-color: #CCC;
     width: 48vmin;
     height: 80vmin;
@@ -20,8 +20,10 @@ body{
 
 .snake{
     background-color: aqua;
+    border: 1px solid black;
 }
 
 .food{
     background-color: yellow;
+    border: 1px solid black;
 }
