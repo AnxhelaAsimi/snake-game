@@ -1,7 +1,7 @@
 import { getInputDirection } from "./input.js";
 
 //how many time the snake moves per second
-export const SNAKE_SPEED = 5;
+export const SNAKE_SPEED = 7;
 
 const snakeBody = [
     {x:11, y:11}
@@ -20,12 +20,18 @@ export function update() {
 }
 
 export function draw(gameBoard) {
-    snakeBody.forEach(segment=>
+    snakeBody.forEach((segment, index)=>
         {
             const snakeElement = document.createElement('div');
             snakeElement.style.gridRowStart =segment.y;
-            snakeElement.style.gridColumnStart = segment.x;
+            snakeElement.style.gridColumnStart = segment.x;  
+            snakeElement.style.background = "linear-gradient("+ getGradientDirection()+",hsla(162, 66%, 56%, "+ (1 - index * 1/snakeBody.length) +"), hsla(162, 66%, 56%, "+ (1 - (index+1) * 1/snakeBody.length) +")";
+            if(index == 0)
+            {
+                snakeElement.style.borderRadius = getBorderRadius();
+            }
             snakeElement.classList.add('snake');
+      
             gameBoard.appendChild(snakeElement);
         })
 }
@@ -56,3 +62,29 @@ function addSegments(){
     newSegments = 0;
 }
 
+
+function getGradientDirection(){
+    if( getInputDirection().y ==-1)
+        return "to bottom";
+    if(getInputDirection().y==1)
+        return "to top";
+    if(getInputDirection().x == -1)
+        return "to right";
+    if(getInputDirection().x == 1)
+        return "to left";
+    else
+        return "to bottom";
+}
+
+function getBorderRadius(){
+    if( getInputDirection().y ==-1)
+        return "10px 10px 0px 0px";
+    if(getInputDirection().y==1)
+        return "0px 0px 10px 10px";
+    if(getInputDirection().x == -1)
+        return "10px 0px 0px 10px";
+    if(getInputDirection().x == 1)
+        return "0px 10px 10px 0px";
+    else
+        return "10px 10px 0px 0px";
+}

@@ -6,8 +6,39 @@
         <title>Snake</title>
         <link rel="stylesheet" href="snake.css">
         <script src="game.js" defer type="module"></script> 
+        <style>
+            @font-face {
+                font-family: "FiraCode";
+                src: url("./assests/FiraCode-VariableFont_wght.ttf");
+            }
+        </style>
     </head>
     <body>
-        <div id="gameBoard"></div>
+        <div id="gameWrapper">
+            <div class="bolts"><div class="bolt"><div class="xicon"></div></div><div class="bolt"><div class="xicon"></div></div></div>
+            <div id="gameBoardWrapper">
+                <div id="gameBoard"></div>
+                <div id="gameInfo"> 
+                    <div class="keysWrapper">
+                       <div> // use keyboard <br>
+                        // arrows to play</div>
+                        <div class="arrowWrapper">
+                            <div class="topKeys"><div class="key">▲</div> </div>
+                            <div class="bottomKeys"><div class="key">◄</div> <div class="key">▼</div><div class="key">►</div></div>
+                        </div>
+                    </div>    
+                    <div class="foodWrapper">                        
+                        <div> // food left</div>
+                        <div id="#foodList">
+                            <div class="food"></div>
+                        </div>                        
+                    </div>
+                    <div id="skipButton">skip</div> 
+                </div>
+                
+            </div>
+            
+            <div class="bolts"><div class="bolt"><div class="xicon"></div></div><div class="bolt"><div class="xicon"></div></div></div>
+        </div>
     </body>
 </html>

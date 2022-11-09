@@ -2,15 +2,41 @@ body{
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
-    font-family: 'Courier New', 'Courier New', Courier, monospace;
+    /* font-family: 'Courier New', 'Courier New', Courier, monospace; */
     justify-content: center;
     align-items: center;
     margin:0;
-    background-color: black;
+    background-image: url('./assests/gameBackground.png');
+    background-position: center;
+
+    font-family: 'FiraCode';
+    font-style: normal;
+    font-weight: 450;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;   
+}
+#gameWrapper{    
+    width: 102vmin;
+    height: 96vmin;
+    background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
+    border: 1px solid #0C1616;
+    box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(32px);
+/* Note: backdrop-filter has minimal browser support */
+    border-radius: 8px;
+}
+
+#gameBoardWrapper{
+    display: flex;
+    justify-content: space-evenly;
+    
 }
 
 #gameBoard{
-    background-color: #CCC;
+    background: rgba(1, 22, 39, 0.84);
+    box-shadow: inset 1px 5px 11px rgba(2, 18, 27, 0.71);
+    border-radius: 8px;
     width: 48vmin;
     height: 80vmin;
     display: grid;
@@ -18,12 +44,96 @@ body{
     grid-template-rows: repeat(40, 1fr);
 }
 
-.snake{
-    background-color: aqua;
-    border: 1px solid black;
+.food div{
+    width: 200%;
+    height: 200%;
+    background: url('./assests/food.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: -50%;
+    left: -50%;
 }
 
-.food{
-    background-color: yellow;
-    border: 1px solid black;
+.bolts{
+    margin: 2.6vmin;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bolt{
+    width: 2.6vmin;
+    height: 2.6vmin;    
+    border-radius: 2vmin;
+    background: radial-gradient(73.08% 73.08% at 50% 26.92%, #217D7A 15.1%, #114B4A 100%);
+    box-shadow: 2px 2px 4px #0D4341, inset 0px 1px 2px #1F8177;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.xicon{
+    background: url('/assests/bolt.svg');
+    background-size: cover;
+    width: 1.2vmin;
+    height: 1.1vmin;
+}
+
+.keysWrapper{
+    padding: 16px 14px;
+    background: rgba(1, 20, 35, 0.19);
+    border-radius: 8px;
+    width: 36vmin;
+    height: 24vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.arrowWrapper{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+}
+
+.topKeys{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.bottomKeys{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.key{
+    width: 11vmin;
+    height: 6vmin;
+    background: #010C15;
+    border: 1px solid #1E2D3D;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.foodWrapper{
+    margin-top: 20px;
+}
+
+#skipButton{
+    box-sizing: border-box;
+    width: 13vmin;
+    height: 7vmin;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 10px;
+    border: 1px solid #FFFFFF;
+    border-radius: 8px;
 }

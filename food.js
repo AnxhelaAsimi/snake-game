@@ -1,7 +1,7 @@
 import { onSnake, expandSnake } from "./snake.js";
 import { GRID_SIZE_X, GRID_SIZE_Y } from "./game.js";
 
-const EXPANSION_RATE = 1;
+const EXPANSION_RATE = 5;
 
 let food = { x: 10, y: 3 };
 export function update() {
@@ -13,6 +13,7 @@ export function update() {
 
 export function draw(gameBoard) {
   const foodElement = document.createElement("div");
+  foodElement.appendChild(document.createElement("div"));
   foodElement.style.gridRowStart = food.y;
   foodElement.style.gridColumnStart = food.x;
   foodElement.classList.add("food");
