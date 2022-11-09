@@ -34,10 +34,19 @@ export function expandSnake(amount){
     newSegments += amount;
 }
 
-export function onSnake(foodPosition){
-    return snakeBody.some(segment => {
+export function onSnake(foodPosition, ignoreHead = false){
+    return snakeBody.some((segment,index) => {
+        if(ignoreHead && index==0)  return false;
         return segment.x==foodPosition.x && segment.y==foodPosition.y;
     })
+}
+
+export function snakeIntersection(){
+    return onSnake(snakeBody[0], true);
+}
+
+export function getSnakeHead(){
+    return snakeBody[0];
 }
 
 function addSegments(){
@@ -46,3 +55,4 @@ function addSegments(){
     }
     newSegments = 0;
 }
+
