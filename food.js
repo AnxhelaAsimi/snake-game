@@ -4,7 +4,7 @@ import { gameOverDisplay, GRID_SIZE_X, GRID_SIZE_Y, setGameOver } from "./game.j
 export let TOTAL_FOOD = 10;
 export let FOOD_LEFT = 10;
 export let food = { x: 10, y: 8 };
-const EXPANSION_RATE = 5;
+const EXPANSION_RATE = 2;
 
 
 export function update() {

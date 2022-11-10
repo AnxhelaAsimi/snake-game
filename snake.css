@@ -86,7 +86,7 @@ body {
     align-items: center;
 }
 
-.restartGame{
+.restartGame {
     margin-top: 5vmin;
     position: relative;     
     color: #607B96;
@@ -179,6 +179,22 @@ body {
     gap: 10px;
 }
 
+#foodList {
+    width: 30vmin;
+    height: 10vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
+}
+
+.restingFood {
+    width: 4vmin;
+    height: 4vmin;
+    background: url('./assests/food.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
 #skipButton {
     box-sizing: border-box;
     width: 13vmin;
@@ -195,31 +211,14 @@ body {
     align-self: flex-end;
 }
 
-.restingFood {
-    width: 4vmin;
-    height: 4vmin;
-    background: url('./assests/food.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#foodList {
-    width: 30vmin;
-    height: 10vmin;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
+.hide {
+    display: none !important;
 }
 
 .flash {
     animation-name: flash-animation;
     animation-duration: 0.3s;
 }
-
-.hide {
-    display: none !important;
-}
-
 
 @keyframes flash-animation {
     from {

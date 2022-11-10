@@ -64,7 +64,7 @@ function addSegments(){
     newSegments = 0;
 }
 
-
+//returns the gradient direction based on where the snake is headed
 function getGradientDirection(){
     if( getInputDirection().y ==-1)
         return "to bottom";
@@ -78,6 +78,7 @@ function getGradientDirection(){
         return "to bottom";
 }
 
+//returns border radius style of head, depending on its direction
 function getBorderRadius(){
     if( getInputDirection().y ==-1)
         return "10px 10px 0px 0px";
