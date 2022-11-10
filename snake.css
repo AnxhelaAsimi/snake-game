@@ -44,6 +44,10 @@ body{
     grid-template-rows: repeat(40, 1fr);
 }
 
+#gameInfo{
+    display:flex; flex-direction:column; justify-content: space-between;
+}
+
 .food div{
     width: 200%;
     height: 200%;
@@ -81,11 +85,11 @@ body{
 }
 
 .keysWrapper{
-    padding: 16px 14px;
+    padding: 17px 15px;
     background: rgba(1, 20, 35, 0.19);
     border-radius: 8px;
-    width: 36vmin;
-    height: 24vmin;
+    width: 32vmin;
+    height: 22vmin;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -110,8 +114,8 @@ body{
 }
 
 .key{
-    width: 11vmin;
-    height: 6vmin;
+    width: 9vmin;
+    height: 5vmin;
     background: #010C15;
     border: 1px solid #1E2D3D;
     border-radius: 8px;
@@ -122,6 +126,10 @@ body{
 
 .foodWrapper{
     margin-top: 20px;
+    padding: 14px 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
 }
 
 #skipButton{
@@ -136,12 +144,32 @@ body{
     gap: 10px;
     border: 1px solid #FFFFFF;
     border-radius: 8px;
+    float: right;
+    align-self: flex-end;
+}
+
+.restingFood{
+    width: 4vmin;
+    height: 4vmin;
+    background: url('./assests/food.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#foodList{
+    width: 30vmin;
+    height: 10vmin;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 7px;
 }
 
 .flash{    
     animation-name: flash-animation;
     animation-duration: 0.3s;
 }
+
+
 @keyframes flash-animation {  
     from { color: #1cffbb; background: hsla(207, 95%, 8%, 0.84); }
     to   { color: default; background: default;}
