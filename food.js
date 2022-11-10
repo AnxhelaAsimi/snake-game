@@ -1,11 +1,12 @@
 import { onSnake, expandSnake } from "./snake.js";
-import { GRID_SIZE_X, GRID_SIZE_Y } from "./game.js";
+import { gameOverDisplay, GRID_SIZE_X, GRID_SIZE_Y, setGameOver } from "./game.js";
 
-export const TOTAL_FOOD = 10;
-let FOOD_LEFT = 10;
+export let TOTAL_FOOD = 10;
+export let FOOD_LEFT = 10;
+export let food = { x: 10, y: 8 };
 const EXPANSION_RATE = 5;
 
-let food = { x: 10, y: 3 };
+
 export function update() {
   if (onSnake(food)) {
     expandSnake(EXPANSION_RATE);
@@ -32,6 +33,15 @@ export function draw(gameBoard) {
   foodElement.style.gridColumnStart = food.x;
   foodElement.classList.add("food");
   gameBoard.appendChild(foodElement);
+  if(FOOD_LEFT==0){
+    setGameOver(true);
+    gameOverDisplay(1);    
+  }
+}
+
+export function restartFood(){
+  FOOD_LEFT = TOTAL_FOOD;
+  food = { x: 10, y: 8 };
 }
 
 function getRandomFoodPosition() {

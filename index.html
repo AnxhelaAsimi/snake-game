@@ -17,7 +17,12 @@
         <div id="gameWrapper">
             <div class="bolts"><div class="bolt"><div class="xicon"></div></div><div class="bolt"><div class="xicon"></div></div></div>
             <div id="gameBoardWrapper">
-                <div id="gameBoard"></div>
+                <div>   
+                    <div id="gameBoard"></div>   
+                    <div id="startGameButton" >start-game</div>
+                    <div id="gameOverState"  class="overstate hide"><div class="gameover"><div>GAME OVER!</div></div> <div class="restartGame">start-again</div></div>
+                    <div id="gameWonState" class="overstate hide" ><div class="gameover"><div>WELL DONE!</div></div> <div class="restartGame">play-again</div></div>                                        
+                </div>
                 <div id="gameInfo"> 
                     <div>
                     <div class="keysWrapper">
@@ -37,8 +42,7 @@
                     <div id="skipButton">skip</div> 
                 </div>
                 
-            </div>
-            
+            </div>     
             <div class="bolts"><div class="bolt"><div class="xicon"></div></div><div class="bolt"><div class="xicon"></div></div></div>
         </div>
     </body>

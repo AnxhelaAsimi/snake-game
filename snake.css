@@ -1,54 +1,101 @@
-body{
+body {
     min-height: 100vh;
     min-width: 100vw;
     display: flex;
-    /* font-family: 'Courier New', 'Courier New', Courier, monospace; */
     justify-content: center;
     align-items: center;
-    margin:0;
+    margin: 0;
     background-image: url('./assests/gameBackground.png');
     background-position: center;
-
     font-family: 'FiraCode';
     font-style: normal;
     font-weight: 450;
-    font-size: 14px;
-    line-height: 18px;
-    color: #FFFFFF;   
+    font-size: 2.5vmin;
+    line-height: 3vmin;
+    color: #FFFFFF;
 }
-#gameWrapper{    
+
+#gameWrapper {
     width: 102vmin;
     height: 96vmin;
     background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
     border: 1px solid #0C1616;
     box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(32px);
-/* Note: backdrop-filter has minimal browser support */
+    /* Note: backdrop-filter has minimal browser support */
     border-radius: 8px;
 }
 
-#gameBoardWrapper{
+#gameBoardWrapper {
     display: flex;
     justify-content: space-evenly;
-    
+    max-height: 80vmin;
 }
 
-#gameBoard{
+#gameBoard {
     background: rgba(1, 22, 39, 0.84);
     box-shadow: inset 1px 5px 11px rgba(2, 18, 27, 0.71);
     border-radius: 8px;
     width: 48vmin;
     height: 80vmin;
     display: grid;
-    grid-template-columns:  repeat(24, 1fr);
+    grid-template-columns: repeat(24, 1fr);
     grid-template-rows: repeat(40, 1fr);
 }
 
-#gameInfo{
-    display:flex; flex-direction:column; justify-content: space-between;
+#gameInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.food div{
+#startGameButton {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 14px;
+    gap: 10px;
+    position: relative;
+    width: 20vmin;
+    height: 5vmin;
+    top: -18vmin;
+    margin: auto;
+    color: #010C15;
+    background: #FEA55F;
+    border-radius: 8px;
+    font-size: 3vmin;
+}
+.overstate{
+    position: relative;
+    top:-30vmin;
+    text-align: center;
+    font-weight: 450; 
+}
+
+.gameover {
+    width: 48vmin;
+    height: 9vmin;   
+    background: rgba(1, 22, 39, 0.84);
+    box-shadow: inset 1px 5px 11px rgba(2, 18, 27, 0.71);
+    border-radius: 8px;
+    font-size: 4vmin;
+    color: #43D9AD;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.restartGame{
+    margin-top: 5vmin;
+    position: relative;     
+    color: #607B96;
+    cursor: pointer;
+}
+.restartGame:hover, .restartGame:active{
+    color: white;
+}
+.food div {
     width: 200%;
     height: 200%;
     background: url('./assests/food.svg');
@@ -59,15 +106,15 @@ body{
     left: -50%;
 }
 
-.bolts{
+.bolts {
     margin: 2.6vmin;
     display: flex;
     justify-content: space-between;
 }
 
-.bolt{
+.bolt {
     width: 2.6vmin;
-    height: 2.6vmin;    
+    height: 2.6vmin;
     border-radius: 2vmin;
     background: radial-gradient(73.08% 73.08% at 50% 26.92%, #217D7A 15.1%, #114B4A 100%);
     box-shadow: 2px 2px 4px #0D4341, inset 0px 1px 2px #1F8177;
@@ -77,14 +124,14 @@ body{
 }
 
 
-.xicon{
+.xicon {
     background: url('/assests/bolt.svg');
     background-size: cover;
     width: 1.2vmin;
     height: 1.1vmin;
 }
 
-.keysWrapper{
+.keysWrapper {
     padding: 17px 15px;
     background: rgba(1, 20, 35, 0.19);
     border-radius: 8px;
@@ -95,25 +142,25 @@ body{
     justify-content: space-between;
 }
 
-.arrowWrapper{
+.arrowWrapper {
     display: flex;
     flex-direction: column;
-    gap:5px;
+    gap: 5px;
 }
 
-.topKeys{
+.topKeys {
     display: flex;
     flex-direction: row;
     justify-content: center;
 }
 
-.bottomKeys{
+.bottomKeys {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
 }
 
-.key{
+.key {
     width: 9vmin;
     height: 5vmin;
     background: #010C15;
@@ -124,7 +171,7 @@ body{
     align-items: center;
 }
 
-.foodWrapper{
+.foodWrapper {
     margin-top: 20px;
     padding: 14px 16px;
     display: flex;
@@ -132,7 +179,7 @@ body{
     gap: 10px;
 }
 
-#skipButton{
+#skipButton {
     box-sizing: border-box;
     width: 13vmin;
     height: 7vmin;
@@ -148,7 +195,7 @@ body{
     align-self: flex-end;
 }
 
-.restingFood{
+.restingFood {
     width: 4vmin;
     height: 4vmin;
     background: url('./assests/food.svg');
@@ -156,7 +203,7 @@ body{
     background-size: cover;
 }
 
-#foodList{
+#foodList {
     width: 30vmin;
     height: 10vmin;
     display: flex;
@@ -164,13 +211,24 @@ body{
     gap: 7px;
 }
 
-.flash{    
+.flash {
     animation-name: flash-animation;
     animation-duration: 0.3s;
 }
 
+.hide {
+    display: none !important;
+}
 
-@keyframes flash-animation {  
-    from { color: #1cffbb; background: hsla(207, 95%, 8%, 0.84); }
-    to   { color: default; background: default;}
+
+@keyframes flash-animation {
+    from {
+        color: #1cffbb;
+        background: hsla(207, 95%, 8%, 0.84);
+    }
+
+    to {
+        color: default;
+        background: default;
+    }
 }

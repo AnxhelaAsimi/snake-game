@@ -2,10 +2,7 @@ import { getInputDirection } from "./input.js";
 
 //how many time the snake moves per second
 export const SNAKE_SPEED = 7;
-
-const snakeBody = [
-    {x:11, y:11}
-];
+export let snakeBody = [{x:10, y:13}];
 let newSegments = 0;
 
 export function update() {
@@ -53,6 +50,11 @@ export function snakeIntersection(){
 
 export function getSnakeHead(){
     return snakeBody[0];
+}
+
+export function restartSnake(){
+    newSegments = 0;
+    snakeBody = [{x:10, y:13}];
 }
 
 function addSegments(){
