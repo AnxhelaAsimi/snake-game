@@ -45,8 +45,6 @@ window.addEventListener('keydown', e=>{
             break; 
                
     }
-    if(firstInput)
-        document.getElementById("startGameButton").classList.add('hide');
 })
 
 export function getInputDirection(){

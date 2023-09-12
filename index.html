@@ -15,35 +15,25 @@
     </head>
     <body>
         <div id="gameWrapper">
-            <div class="bolts"><div class="bolt"><div class="xicon"></div></div><div class="bolt"><div class="xicon"></div></div></div>
             <div id="gameBoardWrapper">
                 <div>   
                     <div id="gameBoard"></div>   
-                    <div id="startGameButton" >start-game</div>
-                    <div id="gameOverState"  class="overstate hide"><div class="gameover"><div>GAME OVER!</div></div> <div class="restartGame">start-again</div></div>
-                    <div id="gameWonState" class="overstate hide" ><div class="gameover"><div>YOU WIN!</div></div> <div class="restartGame">play-again</div></div>                                        
+                    <div id="gameOverState" class="overstate hide"><div class="gameover">GAME OVER!</div> </div>
+                    <div id="gameWonState" class="overstate hide"><div class="gameover">YOU WON!</div> </div>
                 </div>
-                <div id="gameInfo"> 
-                    <div>
-                    <div class="keysWrapper">
-                       <div> // use keyboard <br>
-                        // arrows to play</div>
-                        <div class="arrowWrapper">
-                            <div class="topKeys"><div class="key" id="arrowUp">▲</div> </div>
-                            <div class="bottomKeys"><div class="key" id="arrowLeft">◄</div> <div class="key" id="arrowDown">▼</div><div class="key" id="arrowRight">►</div></div>
+                <div id="gameInfo">     
+                    <div class="arrowWrapper">
+                        <div class="topKey"><div class="key" id="arrowUp">▲</div> </div>
+                        <div class="middleKeys">
+                            <div class="key" id="arrowLeft">◄</div>
+                            <div class="key" id="arrowRight">►</div>
                         </div>
-                    </div>    
-                    <div class="foodWrapper">                        
-                        <div> // food left</div>
-                        <div id="foodList">
-                        </div>                        
+                        <div class="bottomKey"><div class="key" id="arrowUp">▼</div> </div>
                     </div>
-                    </div>
-                    <div id="skipButton">skip</div> 
-                </div>
-                
-            </div>     
-            <div class="bolts"><div class="bolt"><div class="xicon"></div></div><div class="bolt"><div class="xicon"></div></div></div>
+                    <div class="foodWrapper"></div>
+                    <div id="startGameButton">start-game</div>
+                    <div class="restartGame">start-again</div>
+                </div>     
         </div>
     </body>
 </html>

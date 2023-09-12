@@ -19,12 +19,7 @@ export function draw(gameBoard) {
   //draw food list
   const foodListContainer = document.getElementById("foodList");
   foodListContainer.innerHTML = "";
-  for(let i=0; i<TOTAL_FOOD; i++){
-    if(i>=FOOD_LEFT)
-      foodListContainer.innerHTML += '<div class="restingFood" style="opacity:0.3"><div></div></div>';
-    else
-      foodListContainer.innerHTML += '<div class="restingFood"><div></div></div>';
-  }
+  //doo sth with FOOD_LEFT
 
   //food inside the game  
   const foodElement = document.createElement("div");

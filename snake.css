@@ -5,8 +5,7 @@ body {
     justify-content: center;
     align-items: center;
     margin: 0;
-    background-image: url('./assests/gameBackground.png');
-    background-position: center;
+    background-color: #F7A7AB;
     font-family: 'FiraCode';
     font-style: normal;
     font-weight: 450;
@@ -16,10 +15,10 @@ body {
 }
 
 #gameWrapper {
-    width: 102vmin;
-    height: 96vmin;
-    background: linear-gradient(150.26deg, rgba(23, 85, 83, 0.7) 1.7%, rgba(67, 217, 173, 0.091) 81.82%);
-    border: 1px solid #0C1616;
+    width: 45vmin;
+    height: 80vmin;
+    background-repeat: no-repeat;
+    background-image: url(/assests/gameboy.svg);
     box-shadow: inset 0px 2px 0px rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(32px);
     /* Note: backdrop-filter has minimal browser support */
@@ -28,19 +27,22 @@ body {
 
 #gameBoardWrapper {
     display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    height: 100%;
     justify-content: space-evenly;
-    max-height: 80vmin;
 }
 
 #gameBoard {
-    background: rgba(1, 22, 39, 0.84);
-    box-shadow: inset 1px 5px 11px rgba(2, 18, 27, 0.71);
-    border-radius: 8px;
-    width: 48vmin;
-    height: 80vmin;
-    display: grid;
-    grid-template-columns: repeat(24, 1fr);
-    grid-template-rows: repeat(40, 1fr);
+     border-radius: 3px;
+     width: 25vmin;
+     height: 20vmin;
+     display: grid;
+     margin-left: -1vmin;
+     margin-top: 7.5vmin;
+     grid-template-columns: repeat(20, 1fr);
+     grid-template-rows: repeat(20, 1fr);
 }
 
 #gameInfo {
@@ -50,19 +52,11 @@ body {
 }
 
 #startGameButton {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 14px;
-    gap: 10px;
-    position: relative;
     width: 20vmin;
     height: 5vmin;
     top: -18vmin;
     margin: auto;
     color: #010C15;
-    background: #FEA55F;
     border-radius: 8px;
     font-size: 3vmin;
 }
@@ -74,16 +68,10 @@ body {
 }
 
 .gameover {
-    width: 48vmin;
-    height: 9vmin;   
-    background: rgba(1, 22, 39, 0.84);
-    box-shadow: inset 1px 5px 11px rgba(2, 18, 27, 0.71);
-    border-radius: 8px;
-    font-size: 4vmin;
-    color: #43D9AD;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    color: #EE3537;
+    position: absolute;
+    top: 20vmin;
+    left: 5vmin;
 }
 
 .restartGame {
@@ -96,68 +84,16 @@ body {
     color: white;
 }
 .food div {
-    width: 200%;
-    height: 200%;
-    background: url('./assests/food.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    top: -50%;
-    left: -50%;
-}
-
-.bolts {
-    margin: 2.6vmin;
-    display: flex;
-    justify-content: space-between;
-}
-
-.bolt {
-    width: 2.6vmin;
-    height: 2.6vmin;
-    border-radius: 2vmin;
-    background: radial-gradient(73.08% 73.08% at 50% 26.92%, #217D7A 15.1%, #114B4A 100%);
-    box-shadow: 2px 2px 4px #0D4341, inset 0px 1px 2px #1F8177;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-
-.xicon {
-    background: url('/assests/bolt.svg');
-    background-size: cover;
-    width: 1.2vmin;
-    height: 1.1vmin;
-}
-
-.keysWrapper {
-    padding: 17px 15px;
-    background: rgba(1, 20, 35, 0.19);
-    border-radius: 8px;
-    width: 32vmin;
-    height: 22vmin;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    background-color: #EE3537;
+   
 }
 
 .arrowWrapper {
     display: flex;
     flex-direction: column;
     gap: 5px;
-}
-
-.topKeys {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.bottomKeys {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
 }
 
 .key {
@@ -179,37 +115,6 @@ body {
     gap: 10px;
 }
 
-#foodList {
-    width: 30vmin;
-    height: 10vmin;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7px;
-}
-
-.restingFood {
-    width: 4vmin;
-    height: 4vmin;
-    background: url('./assests/food.svg');
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-#skipButton {
-    box-sizing: border-box;
-    width: 13vmin;
-    height: 7vmin;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 14px;
-    gap: 10px;
-    border: 1px solid #FFFFFF;
-    border-radius: 8px;
-    float: right;
-    align-self: flex-end;
-}
 
 .hide {
     display: none !important;

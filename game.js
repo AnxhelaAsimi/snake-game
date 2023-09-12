@@ -72,7 +72,6 @@ function outsideGrid(position) {
 }
 
 function startGame() {
-  document.getElementById("startGameButton").style.display = "none";
   window.dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowUp" }));
 }
 
