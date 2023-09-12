@@ -1,7 +1,7 @@
 import { getInputDirection } from "./input.js";
 
 //how many time the snake moves per second
-export const SNAKE_SPEED = 7;
+export let SNAKE_SPEED = 5;
 export let snakeBody = [{x:10, y:13}];
 let newSegments = 0;
 
@@ -22,7 +22,7 @@ export function draw(gameBoard) {
             const snakeElement = document.createElement('div');
             snakeElement.style.gridRowStart =segment.y;
             snakeElement.style.gridColumnStart = segment.x;  
-            snakeElement.style.background = "linear-gradient("+ getGradientDirection()+",hsla(162, 66%, 56%, "+ (1 - index * 1/snakeBody.length) +"), hsla(162, 66%, 56%, "+ (1 - (index+1) * 1/snakeBody.length) +")";
+            snakeElement.style.background = "linear-gradient("+ getGradientDirection()+",hsla(0, 0%, 51%, "+ (1 - index * 1/snakeBody.length) +"), hsla(120, 0%, 61%, "+ (1 - (index+1) * 1/snakeBody.length) +")";
             if(index == 0)
             {
                 snakeElement.style.borderRadius = getBorderRadius();
@@ -35,6 +35,7 @@ export function draw(gameBoard) {
 
 export function expandSnake(amount){
     newSegments += amount;
+    addSpeed();
 }
 
 export function onSnake(foodPosition, ignoreHead = false){
@@ -53,8 +54,13 @@ export function getSnakeHead(){
 }
 
 export function restartSnake(){
+    SNAKE_SPEED = 5;
     newSegments = 0;
     snakeBody = [{x:10, y:13}];
+}
+
+export function addSpeed(){
+    SNAKE_SPEED ++;
 }
 
 function addSegments(){

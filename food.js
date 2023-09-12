@@ -12,14 +12,12 @@ export function update() {
     expandSnake(EXPANSION_RATE);
     food = getRandomFoodPosition();
     FOOD_LEFT-=1;
+    document.getElementById('foodWrapper').innerHTML = FOOD_LEFT;
   }
 }
 
 export function draw(gameBoard) {
-  //draw food list
-  const foodListContainer = document.getElementById("foodList");
-  foodListContainer.innerHTML = "";
-  //doo sth with FOOD_LEFT
+  document.getElementById('foodWrapper').innerHTML = FOOD_LEFT;
 
   //food inside the game  
   const foodElement = document.createElement("div");
@@ -38,6 +36,12 @@ export function restartFood(){
   FOOD_LEFT = TOTAL_FOOD;
   food = { x: 10, y: 8 };
 }
+
+export function addFood(amount){
+  TOTAL_FOOD = TOTAL_FOOD + amount;
+  FOOD_LEFT = TOTAL_FOOD;
+}
+
 
 function getRandomFoodPosition() {
   let newFoodPosition = randomGridPosition();

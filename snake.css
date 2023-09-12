@@ -6,7 +6,7 @@ body {
     align-items: center;
     margin: 0;
     background-color: #F7A7AB;
-    font-family: 'FiraCode';
+    font-family: 'PixelGamingRegular';
     font-style: normal;
     font-weight: 450;
     font-size: 2.5vmin;
@@ -31,35 +31,19 @@ body {
     width: 100%;
     align-items: center;
     height: 100%;
-    justify-content: space-evenly;
 }
 
 #gameBoard {
-     border-radius: 3px;
-     width: 25vmin;
-     height: 20vmin;
-     display: grid;
-     margin-left: -1vmin;
-     margin-top: 7.5vmin;
-     grid-template-columns: repeat(20, 1fr);
-     grid-template-rows: repeat(20, 1fr);
+    border-radius: 3px;
+    width: 24vmin;
+    height: 19vmin;
+    display: grid;
+    margin-left: -1vmin;
+    margin-top: 14.5vmin;
+    grid-template-columns: repeat(25, 1fr);
+    grid-template-rows: repeat(20, 1fr);
 }
 
-#gameInfo {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-}
-
-#startGameButton {
-    width: 20vmin;
-    height: 5vmin;
-    top: -18vmin;
-    margin: auto;
-    color: #010C15;
-    border-radius: 8px;
-    font-size: 3vmin;
-}
 .overstate{
     position: relative;
     top:-30vmin;
@@ -70,19 +54,12 @@ body {
 .gameover {
     color: #EE3537;
     position: absolute;
-    top: 20vmin;
-    left: 5vmin;
+    width: 15vmin;
+    top: 19vmin;
+    left: 4vmin;
 }
 
-.restartGame {
-    margin-top: 5vmin;
-    position: relative;     
-    color: #607B96;
-    cursor: pointer;
-}
-.restartGame:hover, .restartGame:active{
-    color: white;
-}
+
 .food div {
     width: 100%;
     height: 100%;
@@ -93,28 +70,75 @@ body {
 .arrowWrapper {
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    align-items: center;
+    align-self: flex-start;
+    margin-top: 12vmin;
+    margin-left: 4.5vmin;
+}
+
+.middleKeys{
+    display: flex;
 }
 
 .key {
-    width: 9vmin;
-    height: 5vmin;
-    background: #010C15;
-    border: 1px solid #1E2D3D;
-    border-radius: 8px;
+    width: 7vmin;
+    height: 3.28vmin;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-size: 2vmin;
 }
 
-.foodWrapper {
-    margin-top: 20px;
-    padding: 14px 16px;
+#buttonWrapper{
+    width: 14vmin;
+    height: 6vmin;
     display: flex;
-    flex-direction: column;
-    gap: 10px;
+    margin-top: 6vmin;
+} 
+
+.startGame { 
+    background-image: url(/assests/buttons-start.svg);
+    background-repeat: no-repeat;
 }
 
+.resetGame {
+    background-image: url(/assests/buttons-reset.svg);
+    background-repeat: no-repeat;
+}
+
+#startGameButton{
+    height: 6vmin;
+    width: 7vmin;
+}
+
+
+#restartGameButton{
+    height: 6vmin;
+    width: 7vmin;
+}
+
+#foodWrapper {
+    position: absolute;
+    top: 23vmin;
+    font-size: 1.5vmin;
+    left: 6.5vmin;
+}
+
+#plusButton{
+    position: absolute;
+    width: 4vmin;
+    height: 4vmin;
+    top: 50vmin;
+    left: 28vmin;
+}
+
+#minusButton{
+    position: absolute;
+    width: 4vmin;
+    height: 4vmin;
+    top: 48vmin;
+    left: 35vmin;
+}
 
 .hide {
     display: none !important;
@@ -127,12 +151,10 @@ body {
 
 @keyframes flash-animation {
     from {
-        color: #1cffbb;
-        background: hsla(207, 95%, 8%, 0.84);
+        color: #3b3b3b;
     }
 
     to {
         color: default;
-        background: default;
     }
 }

@@ -8,8 +8,8 @@
         <script src="game.js" defer type="module"></script> 
         <style>
             @font-face {
-                font-family: "FiraCode";
-                src: url("./assests/FiraCode-VariableFont_wght.ttf");
+                font-family: "PixelGamingRegular";
+                src: url("./assests/PixelGamingRegular.ttf");
             }
         </style>
     </head>
@@ -17,23 +17,28 @@
         <div id="gameWrapper">
             <div id="gameBoardWrapper">
                 <div>   
-                    <div id="gameBoard"></div>   
+                    <div id="foodWrapper"></div>
+                    <div id="gameBoard"></div>                       
                     <div id="gameOverState" class="overstate hide"><div class="gameover">GAME OVER!</div> </div>
                     <div id="gameWonState" class="overstate hide"><div class="gameover">YOU WON!</div> </div>
                 </div>
-                <div id="gameInfo">     
-                    <div class="arrowWrapper">
-                        <div class="topKey"><div class="key" id="arrowUp">▲</div> </div>
-                        <div class="middleKeys">
-                            <div class="key" id="arrowLeft">◄</div>
-                            <div class="key" id="arrowRight">►</div>
-                        </div>
-                        <div class="bottomKey"><div class="key" id="arrowUp">▼</div> </div>
+                 
+                <div class="arrowWrapper">
+                    <div class="topKey"><div class="key" id="arrowUp">▲</div> </div>
+                    <div class="middleKeys">
+                        <div class="key" id="arrowLeft">◄</div>
+                        <div class="key" id="arrowRight">►</div>
                     </div>
-                    <div class="foodWrapper"></div>
-                    <div id="startGameButton">start-game</div>
-                    <div class="restartGame">start-again</div>
-                </div>     
+                    <div class="bottomKey"><div class="key" id="arrowDown">▼</div> </div>
+                </div>              
+                 <div>
+                    <div id="plusButton"> </div>
+                    <div id="minusButton"> </div>
+                 </div>
+                <div id="buttonWrapper" class="startGame">
+                    <div id="startGameButton"></div>
+                    <div id="restartGameButton"></div>
+                </div>   
         </div>
     </body>
 </html>

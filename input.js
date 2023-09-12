@@ -1,17 +1,20 @@
 export let inputDirection = {x: 0, y:0};
 export let lastInputDirection = {x: 0, y:0};
-let firstInput = 0;
+let firstInp=true;
 window.addEventListener('keydown', e=>{
     switch(e.key){
         case 'ArrowUp':
             if(lastInputDirection.y !== 0) break
             document.getElementById('arrowUp').classList.add('flash');
+            if(firstInp){
+                document.getElementById("buttonWrapper").classList.remove("startGame");
+                document.getElementById("buttonWrapper").classList.add("resetGame");
+            }
             setTimeout(function() {
                 document.getElementById('arrowUp').classList.remove('flash');
             }, 500);
-
             inputDirection = {x: 0, y: -1};
-            firstInput = 1;
+            firstInp = false;
             break;
         case 'ArrowDown':
             if(lastInputDirection.y !== 0) break
@@ -21,7 +24,6 @@ window.addEventListener('keydown', e=>{
             }, 500);
 
             inputDirection = {x: 0, y: 1};
-            firstInput = 1;
             break;
         case 'ArrowLeft':
             if(lastInputDirection.x !== 0) break
@@ -31,7 +33,6 @@ window.addEventListener('keydown', e=>{
             }, 500);
 
             inputDirection = {x: -1, y: 0};
-            firstInput = 1;
             break;
         case 'ArrowRight':
             if(lastInputDirection.x !== 0) break
@@ -41,7 +42,6 @@ window.addEventListener('keydown', e=>{
             }, 500);
 
             inputDirection = {x: 1, y: 0};
-            firstInput = 1;
             break; 
                
     }
