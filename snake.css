@@ -140,6 +140,15 @@ body {
     left: 35vmin;
 }
 
+.bubble-controls{
+    background-image: url(/assests/controls-bubble.svg);
+    width: 40vmin;
+    height: 34vmin;
+    background-repeat: no-repeat;
+    margin-left: -15%;
+    margin-top: -14%;
+}
+
 .hide {
     display: none !important;
 }

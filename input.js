@@ -1,3 +1,7 @@
+import { addFood } from './food.js';
+import { restartGame, startGame } from './game.js';
+
+
 export let inputDirection = {x: 0, y:0};
 export let lastInputDirection = {x: 0, y:0};
 let firstInp=true;
@@ -43,7 +47,18 @@ window.addEventListener('keydown', e=>{
 
             inputDirection = {x: 1, y: 0};
             break; 
-               
+        case '+':
+            addFood(1);
+            break;    
+        case '-':
+            addFood(-1);
+            break;       
+        case ' ':
+            restartGame();
+            break;  
+        case 'Enter':
+            startGame();
+            break;                        
     }
 })
 

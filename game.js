@@ -1,4 +1,4 @@
-import { FOOD_LEFT, TOTAL_FOOD, draw as drawFood, restartFood, addFood, update as updateFood } from './food.js';
+import { addFood, draw as drawFood, restartFood, update as updateFood } from './food.js';
 import { restartInput } from './input.js';
 import {
   draw as drawSnake,
@@ -63,13 +63,13 @@ function outsideGrid(position) {
   );
 }
 
-function startGame() {
+export function startGame() {
   window.dispatchEvent(new KeyboardEvent("keydown", { key: "ArrowUp" }));
   document.getElementById("buttonWrapper").classList.remove("startGame");
   document.getElementById("buttonWrapper").classList.add("resetGame");
 }
 
-function restartGame() {
+export function restartGame() {
   setGameOver(false);
   lastRenderTime = 0;
 

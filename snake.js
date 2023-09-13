@@ -22,7 +22,7 @@ export function draw(gameBoard) {
             const snakeElement = document.createElement('div');
             snakeElement.style.gridRowStart =segment.y;
             snakeElement.style.gridColumnStart = segment.x;  
-            snakeElement.style.background = "linear-gradient("+ getGradientDirection()+",hsla(0, 0%, 51%, "+ (1 - index * 1/snakeBody.length) +"), hsla(120, 0%, 61%, "+ (1 - (index+1) * 1/snakeBody.length) +")";
+            snakeElement.style.background = "linear-gradient("+ getGradientDirection()+",hsla(0, 0%, 51%, "+ (1 - index * 1/snakeBody.length + 0.2) +"), hsla(120, 0%, 61%, "+ (1 - (index+1) * 1/snakeBody.length + 0.2) +")";
             if(index == 0)
             {
                 snakeElement.style.borderRadius = getBorderRadius();
