@@ -15,7 +15,8 @@ export let gameOver = false;
 
 let lastRenderTime = 0;
 const gameBoard = document.getElementById("gameBoard");
-
+let gameWon = new Audio('/assests/snake_audio/game_over_win.wav');
+let gameLost = new Audio('/assests/snake_audio/game_over_lose.wav');
 //game frame loop
 function main(currentTime) {
   const secondsSinceLastRender = (currentTime - lastRenderTime) / 1000;
@@ -88,8 +89,10 @@ export function restartGame() {
 
 export function gameOverDisplay(won) {
   if (won) {
+    gameWon.play();
     document.getElementById("gameWonState").classList.remove("hide");
   } else {
+    gameLost.play();
     document.getElementById("gameOverState").classList.remove("hide");
   }
   // to stop rendering

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72.03 51.9">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: #fff;
+      }
+
+      .cls-3, .cls-2 {
+        isolation: isolate;
+      }
+
+      .cls-4 {
+        fill: #b0b1b1;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+
+      .cls-4, .cls-5 {
+        stroke: #5d1f36;
+      }
+
+      .cls-2 {
+        font-family: ArialMT, Arial;
+        font-size: 12px;
+      }
+
+      .cls-5 {
+        fill: #f26a65;
+        stroke-miterlimit: 10;
+        stroke-width: 2px;
+      }
+    </style>
+  </defs>
+  <path class="cls-4" d="m13.52,13.87L45.34,2.18c9.9-3.64,20.88,1.44,24.51,11.34h0c3.64,9.9-1.44,20.88-11.34,24.51l-31.82,11.69c-9.9,3.64-20.88-1.44-24.51-11.34h0c-3.64-9.9,1.44-20.88,11.34-24.51Z"/>
+  <circle class="cls-5" cx="20.99" cy="31.64" r="11.2"/>
+  <circle class="cls-5" cx="51.02" cy="20.44" r="11.2"/>
+  <g class="cls-3">
+    <text class="cls-2" transform="translate(18.84 35.75) rotate(-20.17)"><tspan x="0" y="0">+</tspan></text>
+  </g>
+  <g>
+    <circle class="cls-5" cx="20.99" cy="29.64" r="11.2"/>
+    <path class="cls-1" d="m23.02,39.62c-.6.12-1.28.25-2.09.25-5.65,0-10.19-4.61-10.19-10.18,0-2.57.9-4.92,2.53-6.7-.43,1.95-.73,5.56,1.1,9.31,2.04,4.19,5.75,6.29,8.65,7.32h0Z"/>
+  </g>
+  <g class="cls-3">
+    <text class="cls-2" transform="translate(18.84 33.75) rotate(-20.17)"><tspan x="0" y="0">+</tspan></text>
+  </g>
+  <g class="cls-3">
+    <text class="cls-2" transform="translate(51.12 23.29) rotate(-20.17)"><tspan x="0" y="0">-</tspan></text>
+  </g>
+  <g>
+    <circle class="cls-5" cx="51.02" cy="18.44" r="11.2"/>
+    <path class="cls-1" d="m53.05,28.42c-.6.12-1.28.25-2.09.25-5.65,0-10.19-4.61-10.19-10.18,0-2.57.9-4.92,2.53-6.7-.43,1.95-.73,5.56,1.1,9.31,2.04,4.19,5.75,6.29,8.65,7.32h0Z"/>
+  </g>
+  <g class="cls-3">
+    <text class="cls-2" transform="translate(51.12 21.29) rotate(-20.17)"><tspan x="0" y="0">-</tspan></text>
+  </g>
+</svg>

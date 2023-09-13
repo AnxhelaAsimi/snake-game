@@ -124,20 +124,39 @@ body {
     left: 6.5vmin;
 }
 
-#plusButton{
+#plusMinusButton{
+    background-image: url(/assests/food-buttons.svg);
+    background-repeat: no-repeat;
+    width: 16vmin;
     position: absolute;
-    width: 4vmin;
-    height: 4vmin;
-    top: 50vmin;
-    left: 28vmin;
+    height: 11vmin;
+    right: 3vmin;
+    display: flex;
+    top: 45vmin;
+}
+
+.plus-button-pressed{
+    background-image: url(/assests/food-buttons-plus.svg)!important;
+}
+
+.minus-button-pressed{
+    background-image: url(/assests/food-buttons-minus.svg)!important;
+}
+
+#plusButton{
+    position: relative;
+    width: 5vmin;
+    height: 5vmin;
+    top: 4vmin;
+    left: 2vmin;
 }
 
 #minusButton{
-    position: absolute;
-    width: 4vmin;
-    height: 4vmin;
-    top: 48vmin;
-    left: 35vmin;
+    position: relative;
+    width: 5vmin;
+    height: 5vmin;
+    top: 2vmin;
+    left: 3vmin;
 }
 
 .bubble-controls{

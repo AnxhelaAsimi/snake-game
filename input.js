@@ -49,9 +49,11 @@ window.addEventListener('keydown', e=>{
             break; 
         case '+':
             addFood(1);
+            document.getElementById('plusMinusButton').classList.add('plus-button-pressed');
             break;    
         case '-':
             addFood(-1);
+            document.getElementById('plusMinusButton').classList.add('minus-button-pressed');
             break;       
         case ' ':
             restartGame();
@@ -59,6 +61,17 @@ window.addEventListener('keydown', e=>{
         case 'Enter':
             startGame();
             break;                        
+    }
+})
+
+window.addEventListener('keyup', e=>{
+    switch(e.key){
+        case '+':
+            document.getElementById('plusMinusButton').classList.remove('plus-button-pressed');
+            break;    
+        case '-':
+            document.getElementById('plusMinusButton').classList.remove('minus-button-pressed');
+            break;                               
     }
 })
 

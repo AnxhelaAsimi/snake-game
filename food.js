@@ -38,6 +38,8 @@ export function restartFood(){
 }
 
 export function addFood(amount){
+  if(TOTAL_FOOD + amount < 1)
+    return;
   TOTAL_FOOD = TOTAL_FOOD + amount;
   FOOD_LEFT = TOTAL_FOOD;
 }
