@@ -172,6 +172,16 @@ body {
     display: none !important;
 }
 
+@media only screen and (max-width: 600px) {
+    .bubble-controls {
+      display: none;
+    }
+
+    #gameWrapper{
+        scale: 1.8;
+    }
+}
+
 .flash {
     animation-name: flash-animation;
     animation-duration: 0.3s;

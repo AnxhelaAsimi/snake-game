@@ -5,10 +5,11 @@ export let TOTAL_FOOD = 10;
 export let FOOD_LEFT = 10;
 export let food = { x: 10, y: 8 };
 const EXPANSION_RATE = 2;
-
+let eatFood = new Audio('/assests/snake_audio/food_catch.wav'); 
 
 export function update() {
   if (onSnake(food)) {
+    eatFood.play();
     expandSnake(EXPANSION_RATE);
     food = getRandomFoodPosition();
     FOOD_LEFT-=1;

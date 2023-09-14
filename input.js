@@ -5,7 +5,10 @@ import { restartGame, startGame } from './game.js';
 export let inputDirection = {x: 0, y:0};
 export let lastInputDirection = {x: 0, y:0};
 let firstInp=true;
+let pressKey = new Audio('/assests/snake_audio/all_buttons.wav');
+
 window.addEventListener('keydown', e=>{
+    pressKey.play();
     switch(e.key){
         case 'ArrowUp':
             if(lastInputDirection.y !== 0) break
