@@ -8,6 +8,7 @@ let firstInp=true;
 let pressKey = new Audio('/assests/snake_audio/all_buttons.wav');
 
 window.addEventListener('keydown', e=>{
+    pressKey.currentTime = 0;
     pressKey.play();
     switch(e.key){
         case 'ArrowUp':

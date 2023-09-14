@@ -43,6 +43,8 @@ export function addFood(amount){
     return;
   TOTAL_FOOD = TOTAL_FOOD + amount;
   FOOD_LEFT = TOTAL_FOOD;
+  document.getElementById('foodWrapper').innerHTML = FOOD_LEFT;
+
 }
 
 

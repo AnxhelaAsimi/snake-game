@@ -128,9 +128,13 @@ document.getElementById("arrowRight").addEventListener("click", function(){
 })
 
 document.getElementById("plusButton").addEventListener("click", function(){
+  window.dispatchEvent(new KeyboardEvent("keydown", { key: "+" }));
   addFood(1);
+  setTimeout(()=>window.dispatchEvent(new KeyboardEvent("keyup", { key: "+" })), 100);
 })
 
 document.getElementById("minusButton").addEventListener("click", function(){
+  window.dispatchEvent(new KeyboardEvent("keydown", { key: "-" }));
   addFood(-1);
+  setTimeout(()=>window.dispatchEvent(new KeyboardEvent("keyup", { key: "-" })), 100);
 })
